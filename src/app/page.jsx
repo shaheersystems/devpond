@@ -40,7 +40,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center max-w-lg gap-2 mx-auto md:flex-nowrap">
             <Input type="email" placeholder="Enter your email" />
-            <Button color="indigo">
+            <Button color="indigo" className="w-full md:w-auto">
               <span className="whitespace-nowrap">Get Early Access</span>
             </Button>
           </div>
