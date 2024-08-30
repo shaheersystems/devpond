@@ -12,7 +12,16 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        mandai: ["var(--font-mandai)", "serif"],
+      },
+      colors: {
+        primary: "#f5f4ef",
+        accent: "#6366f1",
+        secondary: "#3d3929",
+      },
     },
   },
   plugins: [],
+  darkMode: "class",
 };
