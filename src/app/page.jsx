@@ -1,7 +1,16 @@
+"use client";
 import { Button } from "@/components/base/button";
-import { Input } from "@/components/base/input";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 export default function Home() {
+  const [auth, setAuth] = useState(false);
+  useEffect(() => {
+    if (auth) {
+      redirect("/home");
+    }
+  }, [auth]);
   return (
     <main>
       <div className="max-w-4xl px-2 mx-auto min-h-[100vh] text-center flex flex-col items-center justify-center">
@@ -29,23 +38,36 @@ export default function Home() {
               </span>
             </Link>
           </div>
-          <h2 className="text-4xl text-secondary font-mandai">
+          <h2 className="text-2xl md:text-4xl text-secondary font-mandai">
             Interview Challenges, Curated by Engineers Who’ve Been Through the
             Grind
           </h2>
-          <p className="text-neutral-700">
+          <p className="text-sm md:text-md text-neutral-700">
             Devpond is a community-driven platform where developers who've faced
             the toughest tech interviews share their insights. Join the waitlist
             to get early access and learn from those who've been there.
           </p>
-          <div className="flex flex-wrap items-center justify-center max-w-lg gap-2 mx-auto md:flex-nowrap">
-            <Input type="email" placeholder="Enter your email" />
-            <Button color="indigo" className="w-full md:w-auto">
-              <span className="whitespace-nowrap">Get Early Access</span>
+          <div className="flex flex-wrap items-center justify-center max-w-lg gap-4 mx-auto md:flex-nowrap">
+            <Button
+              onClick={() => setAuth(!auth)}
+              color="indigo"
+              className="w-full md:w-auto"
+            >
+              <span className="whitespace-nowrap">Start your Journey</span>
+              <ArrowRightIcon />
+            </Button>
+            <Button
+              onClick={() => setAuth(!auth)}
+              outline
+              className="w-full md:w-auto"
+            >
+              <span className="whitespace-nowrap">Login</span>
+              <ArrowRightIcon />
             </Button>
           </div>
         </div>
       </div>
+      <div className="max-w-4xl px-2 mx-auto min-h-[50vh] text-center flex flex-col items-center justify-center"></div>
     </main>
   );
 }

@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/16/solid";
 import QuestionPagination from "@/components/pagination";
 import Question from "@/components/question";
+import SelectBox from "@/components/select-box";
 
 const Questions = () => {
   return (
@@ -26,19 +27,10 @@ const Questions = () => {
         </div>
       </div>
       <div className="sticky top-0 z-10 flex flex-wrap items-center gap-4 py-2 bg-primary md:bg-white">
-        <div className="flex items-center gap-4">
-          <Button outline>
-            Role
-            <ChevronDownIcon className="w-5 h-5" />
-          </Button>
-          <Button outline>
-            Company
-            <ChevronDownIcon className="w-5 h-5" />
-          </Button>
-          <Button outline>
-            Category
-            <ChevronDownIcon className="w-5 h-5" />
-          </Button>
+        <div className="flex items-center gap-8">
+          <SelectBox />
+          <SelectBox />
+          <SelectBox />
         </div>
       </div>
       <div className="py-2">

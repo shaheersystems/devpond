@@ -28,8 +28,7 @@ import Link from "next/link";
 import Logo from "./logo";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/constants";
-import { Button } from "./base/button";
-
+import { Gauge } from "@suyalcinkaya/gauge";
 const AuthNavbar = () => {
   const pathname = usePathname();
   return (
@@ -51,9 +50,13 @@ const AuthNavbar = () => {
       </NavbarSection>
       <NavbarSpacer />
       <NavbarSection>
-        <NavbarItem href="/search" aria-label="Search">
-          <MagnifyingGlassIcon />
-        </NavbarItem>
+        <Gauge
+          size={"xs"}
+          primary={"#3d3929"}
+          secondary={"#ffff"}
+          showValue
+          value={100 / 40}
+        />
         <Dropdown>
           <DropdownButton as={NavbarItem}>
             <Avatar
