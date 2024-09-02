@@ -67,7 +67,54 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl px-2 mx-auto min-h-[50vh] text-center flex flex-col items-center justify-center"></div>
+      <div className="flex gap-12 bg-white min-h-[40vh] items-center justify-center px-8 py-2 text-center flex-col">
+        <h2 className="text-2xl md:text-4xl text-secondary font-mandai">
+          Questions asked by Top Companies in Pakistan
+        </h2>
+        <div className="flex flex-wrap items-center justify-between w-full gap-4">
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://cdn.prod.website-files.com/65e9d802e7334ec910a26e59/65e9dc44087cee387ed320b5_Devsinc_Logo-removebg-preview%20(1).png"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://static-cdn.i2cinc.com/wp-content/themes/i2cinc-2023/assets/images/logo.svg"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://illuminatechnology.com/wp-content/uploads/2023/03/Asset-1@2x.png"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://www.dubizzlelabs.com/static/DUBIZZLELABS-FULL-COLOUR-ee0ffcb14214e71e72b13e4b83fe856a.png"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://linkedmatrix.com/common/logo.svg"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://code-graphers.com/wp-content/uploads/2022/05/apple-touch-icon-2-e1653393163339.png"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://codedistrict.com/wp-content/themes/codedistrict/assets/images/logo.svg"
+            alt=""
+          />
+          <img
+            className="h-8 hover:grayscale-0 int grayscale object-fit"
+            src="https://nextbridge.com/wp-content/uploads/2022/02/Group-187.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="p-4 bg-primary"></div>
     </main>
   );
 }
