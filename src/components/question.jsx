@@ -10,7 +10,10 @@ const Question = () => {
     <div className="p-4 space-y-4 bg-white border rounded-lg shadow md:bg-primary">
       <div className="flex items-center gap-2">
         <p>
-          Asked at <span className="font-semibold text-secondary">Google</span>
+          Asked at{" "}
+          <span className="font-semibold text-secondary">
+            Arbisoft + 5 others
+          </span>
         </p>
         •<span className="text-sm text-neutral-500">2 days ago</span>
       </div>
@@ -20,7 +23,7 @@ const Question = () => {
         </h2>
       </div>
       <div>
-        <span className="px-2 py-1 text-xs border rounded-md cursor-pointer hover:bg-neutral-100">
+        <span className="px-2 py-1 text-xs border rounded-md cursor-pointer hover:bg-black/5 md:hover:bg-neutral-200">
           Product Management
         </span>
       </div>

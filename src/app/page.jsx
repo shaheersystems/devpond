@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <div className="max-w-4xl px-2 mx-auto min-h-[100vh] text-center flex flex-col items-center justify-center">
-        <div className="p-4 space-y-4">
+        <div className="p-4 space-y-8">
           <div className="flex items-center justify-center">
             <Link className="flex items-center gap-2 text-secondary" href={"/"}>
               <svg
@@ -38,7 +38,7 @@ export default function Home() {
               </span>
             </Link>
           </div>
-          <h2 className="text-2xl md:text-4xl text-secondary font-mandai">
+          <h2 className="text-2xl md:text-6xl text-secondary font-mandai">
             Interview Challenges, Curated by Engineers Who’ve Been Through the
             Grind
           </h2>
