@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} ${mandai.variable}`}>
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
