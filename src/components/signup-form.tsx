@@ -19,8 +19,10 @@ export function SignUpForm({
   const [password, setPassword] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const { data, error } = await signUp.email({
         name,
@@ -34,6 +36,7 @@ export function SignUpForm({
         console.log(data);
         router.push("/dashboard");
       }
+      setLoading(false);
     } catch (error: any) {
       setErrorMessage((error && error.message) || "An error occurred");
     }
@@ -96,8 +99,17 @@ export function SignUpForm({
                     required
                   />
                 </div>
-                <Button type="submit" variant={"secondary"} className="w-full">
-                  Sign Up
+                <Button
+                  disabled={loading}
+                  type="submit"
+                  variant={"secondary"}
+                  className="w-full"
+                >
+                  {loading ? (
+                    <span className="animate-pulse">Loading...</span>
+                  ) : (
+                    "Sign up"
+                  )}
                 </Button>
               </div>
               <div className="text-center text-sm">
