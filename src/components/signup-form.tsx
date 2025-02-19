@@ -99,12 +99,7 @@ export function SignUpForm({
                     required
                   />
                 </div>
-                <Button
-                  disabled={loading}
-                  type="submit"
-                  variant={"secondary"}
-                  className="w-full"
-                >
+                <Button disabled={loading} type="submit" className="w-full">
                   {loading ? (
                     <span className="animate-pulse">Loading...</span>
                   ) : (
