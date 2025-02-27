@@ -15,7 +15,7 @@ const ProblemCard = () => {
         <Link className="hover:underline" href={"/problems/maximum-subarray"}>
           Find the subarray with maximum sum.
         </Link>
-        <Button variant="ghost" size="icon">
+        <Button size="icon">
           <RiAiGenerate />
         </Button>
       </CardTitle>
